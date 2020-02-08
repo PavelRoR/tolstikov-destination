@@ -1,11 +1,14 @@
 section#main
 	.container
 		include ../0.header.pug
-		p.pre записи мастер-класса - внизу страницы
-		h1.main-title=head_title
-		h2.main-subtitle О том, как найти себя и своё место в этом мире!
-		p.main-info Старт курса: 
-			span ХХ февраля
-		p.main-info Автор курса: 
-			span Виктор Толстиков
-		+b('','#prices','Записаться')
+		.main-container
+			p.pre записи мастер-класса - внизу страницы
+			h1.main-title
+				small обучающий курс
+				=head_title
+			h2.main-subtitle О том, как найти себя и своё место в этом мире!
+			p.main-info Старт курса: 
+				span ХХ февраля
+			p.main-info Автор курса: 
+				span Виктор Толстиков
+			+b('button-main','#prices','Записаться')

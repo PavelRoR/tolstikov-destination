@@ -1,0 +1,36 @@
+header
+	padding 15px 0
+	overflow hidden
+	margin-bottom: 10px
+.header-logo
+	display block
+	float left
+	width: 100px
+.contacts
+	float: right
+	text-align: right
+.contact
+	line-height: 36px
+	color #fff
+	font-size: 16px
+	font-family: 'Arial', sans-serif
+	margin-left: 14px
+	padding-left: 25px
+	background-repeat no-repeat
+	background-position: left center
+	background-size: 17px
+	&&-tel
+		background-image url(../img/icons/phone.png)
+		&:first-of-type
+			margin-left: 0
+	&&-skype
+		background-image url(../img/icons/skype.png)
+	&&-email
+		background-image url(../img/icons/envelope.png)
+		padding-left: 27px
+	&:focus
+		text-decoration: none
+		color #fff
+	&:hover
+		text-decoration: underline
+		color #fff

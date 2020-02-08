@@ -1,0 +1,56 @@
+#author
+	padding 50px 0
+	background-color: rgba(#667B8B,.05)
+.author-img
+	display block
+	width 100%
+	max-width 290px
+	margin 0 auto 50px
+	box-shadow 0 0 12px 3px rgba(#667b8b,.35)
+	border-radius: 50%
+.author-title
+	font-size: 18px
+	font-family: OSB
+	margin 0 0 30px
+.certs
+	text-align: center
+.certs-title
+	margin-top: 20px
+	font-family: RO
+	line-height: 1.667;
+.author-list
+	li
+		margin-left: 30px
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0 
+.certs-link
+	display inline-block
+	margin 0 auto
+	position relative
+	overflow hidden
+	text-align: center
+	&:before
+		content: ''
+		position: absolute
+		top 0
+		left 0
+		right 0
+		bottom: 0
+		width auto
+		height 100%
+		background-color: rgba(#667B8B,.6)
+		background-image url(../img/icons/zoom.png)
+		background-repeat no-repeat
+		background-position: center
+		transition: all .4s ease
+		opacity 0
+	&:hover
+		&:before
+			opacity 1
+.certs-img
+	display: inline
+	background-color #fff
+	border: 1px solid rgb(10, 25, 56);
+	margin 0 auto
+	height 126px

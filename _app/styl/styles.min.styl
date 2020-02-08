@@ -1,11 +1,58 @@
+RO = 'RussoOne', sans-serif
+G = 'Georgia', serif
+OSB = 'OpenSansBold', sans-serif
+
+@font-face {
+	font-family: 'georgia';
+	src: url('../fonts/georgia.eot');
+	src: url('../fonts/georgia.eot') format('embedded-opentype'),
+		 url('../fonts/georgia.woff2') format('woff2'),
+		 url('../fonts/georgia.woff') format('woff'),
+		 url('../fonts/georgia.ttf') format('truetype'),
+		 url('../fonts/georgia.svg#georgia') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RussoOne';
+	src: url('../fonts/RussoOne.eot');
+	src: url('../fonts/RussoOne.eot') format('embedded-opentype'),
+		 url('../fonts/RussoOne.woff2') format('woff2'),
+		 url('../fonts/RussoOne.woff') format('woff'),
+		 url('../fonts/RussoOne.ttf') format('truetype'),
+		 url('../fonts/RussoOne.svg#RussoOne') format('svg');
+	font-display: fallback;
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url('../fonts/OpenSansBold.eot');
+	src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'),
+		url('../fonts/OpenSansBold.woff2') format('woff2'),
+		url('../fonts/OpenSansBold.woff') format('woff'),
+		url('../fonts/OpenSansBold.ttf') format('truetype'),
+		url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+	font-display: fallback;
+	font-weight: bold
+	font-style: normal;
+}
+
 @import '../_css/bootstrap.min.css'
 @import '../_css/jquery.fancybox.min.css'
+@import '../_css/flipclock.min.css'
 
 *
 	margin 0
 	padding 0
 	outline none
-
+body
+	font-size: 18px
+	font-family: G
+	background-color: #FFFFFF
+	color #2a251d
+	line-height: 1.35
 a
 	color: #000
 	&:focus
@@ -55,6 +102,36 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.general-title
+	text-align: center
+	font-size: 32px
+	font-family: RO
+	text-transform: uppercase
+	margin-bottom: 35px
+	color #667B8B
+.button
+	display: block
+	margin 0 auto
+	font-size: 20px
+	font-family: RO
+	text-transform: uppercase
+	width 100%
+	max-width 300px
+	padding 16px 10px
+	text-align: center
+	color #fff
+	background-color: #F0651B
+	border: 2px solid #fff
+	box-shadow: 0 0 0 3px #F0651B
+	border-radius: 3px
+	transition: all .4s ease
+	&:focus
+		color #fff
+	&:hover
+		color #F0651B
+		background-color: #000
+		border-color: #F0651B
+		box-shadow: 0 0 0 3px #000
 
 @import 'main/0.header'
 @import 'main/1.main'

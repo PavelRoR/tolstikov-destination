@@ -1,0 +1,56 @@
+#plan
+	padding 50px 0
+.plan-item
+	padding 30px 400px 30px 30px
+	box-shadow: 0 0 12px 3px rgba(#667b8b,.35)
+	background-color: #fff
+	border-radius: 10px
+	margin-bottom: 40px
+	background-repeat: no-repeat
+	background-position: center right
+	background-size: cover
+	&-1
+		background-image linear-gradient(to right, #fff 50%, rgba(#fff,.3) 100%), url(../img/backs/plan-img-1.jpg)
+	&-2
+		background-image linear-gradient(to right, #fff 50%, rgba(#fff,.3) 100%), url(../img/backs/plan-img-2.jpg)
+	&-title
+		font-size: 25px
+		margin-bottom: 20px
+		font-family: OSB
+		small
+			font-size: 18px
+			display block
+			// font-family: G
+	&-list
+		li
+			margin-left: 20px
+			padding-left: 20px
+			position relative
+			list-style none
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: ''
+				display block
+				position: absolute
+				top 8px
+				left 0
+				border-radius: 50px
+				width 10px
+				height 10px
+				background-color: #667B8B
+	&-sublist
+		margin-bottom: 10px
+		li
+			margin-left: 40px
+			padding-left: 15px
+			&:before
+				content '-'
+				font-size: 30px
+				font-family: G
+				background-color: transparent
+				top 0
+				height 21px
+				width auto
+				line-height: 21px

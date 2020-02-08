@@ -6,15 +6,15 @@ section#records
 				h4.record-title Запись занятия от 20.02.20
 				.video-wrapper.video-wrapper-rec
 					iframe(src="https://player.vimeo.com/video/"  allowFullScreen mozallowfullscreen webkitAllowFullScreen)
-				p.rec-text Занятие состоится 20.02.20, в 19:00
-				p.rec-text Запись занятия появится здесь 21.02.20, после 13:00
+				p.record-text Занятие состоится 20.02.20, в 19:00
+				p.record-text Запись занятия появится здесь 21.02.20, после 13:00
 			.col-md-6.col-sm-6
-				h4.record-title Запись занятия от 21.02.20
+				h4.record-title.record-title-2 Запись занятия от 21.02.20
 				.video-wrapper.video-wrapper-rec
 					iframe(src="https://player.vimeo.com/video/"  allowFullScreen mozallowfullscreen webkitAllowFullScreen)
-				p.rec-text Занятие состоится 21.02.20, в 19:00
-				p.rec-text Запись занятия появится здесь 22.01.20, после 13:00
-			p.recs-text Записи занятий будет в открытом доступе до 25.02.20
-			+gt('','Записей мастер-класса нет в свободном доступе')
-			p.rec-text.text-sale Но Вы можете купить запись интенсива за 350р. и радоваться жизни вместе с теми, кто её уже смотрел
-			+b('','','Купить записи','_blank')
+				p.record-text Занятие состоится 21.02.20, в 19:00
+				p.record-text Запись занятия появится здесь 22.01.20, после 13:00
+		p.records-text Записи занятий будет в открытом доступе до 25.02.20
+		+gt('hide','Записей мастер-класса нет в свободном доступе')
+		p.records-text.text-sale.hide Но Вы можете купить запись интенсива за 350р. и радоваться жизни вместе с теми, кто её уже смотрел
+		+b('button-records-sale hide','#!','Купить записи','_blank')

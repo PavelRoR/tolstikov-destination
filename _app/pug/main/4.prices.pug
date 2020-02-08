@@ -1,3 +1,15 @@
+-full_1 = '9 900р.'
+-full_2 = '19 900р.'
+
+-sale_1 = '1 000р.'
+-sale_2 = '2 000р.'
+
+-today_1 = ' 8 900р.'
+-today_2 = ' 17 900р.'
+
+-link_1 = '#!'
+-link_2 = '#!'
+
 section#prices
 	.container
 		+gt('','Выберите свой вариант участия')
@@ -6,8 +18,9 @@ section#prices
 				.col-md-6.col-sm-6
 					.packet
 						.packet-head
-							small пакет
-							| Базовый
+							.packet-head-title
+								small пакет
+								| Базовый
 						.packet-body
 							ul.packet-list
 								li 8 видео-уроков с техниками и медитациями
@@ -15,7 +28,7 @@ section#prices
 								li Ответы на ДЗ в комментариях
 						.packet-footer
 							p.cost.cost-full Стоимость:
-								span
+								span=full_1
 							p.cost.cost-sale Скидка:
 								span#sale-1=sale_1
 							p.cost.cost-today Стоимость сегодня:
@@ -24,8 +37,9 @@ section#prices
 				.col-md-6.col-sm-6
 					.packet
 						.packet-head
-							small пакет
-							| Мастер-группа
+							.packet-head-title
+								small пакет
+								| Мастер-группа
 						.packet-body
 							ul.packet-list
 								li 16 видео-уроков с техниками и медитациями
@@ -34,7 +48,7 @@ section#prices
 								li Дополнительные видео с ответами на вопросы
 						.packet-footer
 							p.cost.cost-full Стоимость:
-								span
+								span=full_2
 							p.cost.cost-sale Скидка:
 								span#sale-2=sale_2
 							p.cost.cost-today Стоимость сегодня:
