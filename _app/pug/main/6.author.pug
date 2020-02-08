@@ -1,0 +1,26 @@
+section#author
+	.container
+		+gt('','О тренере')
+		.row
+			.col-md-4.col-sm-4
+				img(src="img/images/victor.png", alt="Виктор Толстиков").author-img
+			.col-md-8.col-sm-8
+				h4.author-title Виктор Толстиков:
+				ul.general-list-3
+					li Продюсер крупного тренинг-центра
+					li НЛП-тренер международного уровня
+					li Исследователь мест силы и парапсихологии
+					li Инструктор по славянской системе «Ведасонь»
+					li Ведущий авторских курсов и тренингов
+					li Автор книг и ряда уникальных методик
+					li Постоянный гость на ведущих телеканалах
+		.certs
+			.row
+				.col-md-2
+					h4.certs-title Сертификаты и дипломы:
+				.col-md-10
+					.row
+						each n in [1,2,3,4]
+							.col-md-3.col-sm-3.col-xs-6
+								a.certs-link(href="img/certs/cert-"+n+".png" data-fancybox="certs")
+									img.certs-img(src="img/certs/cert-"+n+".min.png" alt="Сертификат "+n)

@@ -1,0 +1,31 @@
+-var head_url = 'https://tolstikov.mastervision.su/destination/';
+-var head_title = '«Предназначение»';
+-var head_description = 'Обучающий курс Виктора Толстикова';
+//- -var head_img = 'img/banner.jpg';
+-var styles = 'css/styles.min.css';
+-var fav_ico = 'favicon.ico';
+-var fav_png = 'favicon.png';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target,id)
+	a.button(class=cl href=href target=target id=id)=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/main/1.main.pug
+		include pug/main/2.lets.pug
+		include pug/main/3.plan.pug
+		include pug/main/4.prices.pug
+		include pug/main/5.for.pug
+		include pug/main/6.author.pug
+		include pug/main/7.records.pug
+		include pug/main/8.footer.pug
+		include pug/main/9.scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts

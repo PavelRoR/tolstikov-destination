@@ -1,0 +1,53 @@
+section#prices
+	.container
+		+gt('','Выберите свой вариант участия')
+		.packets
+			.row
+				.col-md-6.col-sm-6
+					.packet
+						.packet-head
+							small пакет
+							| Базовый
+						.packet-body
+							ul.packet-list
+								li 8 видео-уроков с техниками и медитациями
+								li Закрытая учебная площадка
+								li Ответы на ДЗ в комментариях
+						.packet-footer
+							p.cost.cost-full Стоимость:
+								span
+							p.cost.cost-sale Скидка:
+								span#sale-1=sale_1
+							p.cost.cost-today Стоимость сегодня:
+								span#today-1=today_1
+							+b('',link_1,'Выбрать','_blank','#link-1')
+				.col-md-6.col-sm-6
+					.packet
+						.packet-head
+							small пакет
+							| Мастер-группа
+						.packet-body
+							ul.packet-list
+								li 16 видео-уроков с техниками и медитациями
+								li Закрытая учебная площадка
+								li Ответы на ДЗ в комментариях
+								li Дополнительные видео с ответами на вопросы
+						.packet-footer
+							p.cost.cost-full Стоимость:
+								span
+							p.cost.cost-sale Скидка:
+								span#sale-2=sale_2
+							p.cost.cost-today Стоимость сегодня:
+								span#today-2=today_2
+							+b('',link_2,'Выбрать','_blank','#link-2')
+		.prepayment
+			h4.prepayment-title Акция!!!
+			p.prepayment-text Платите 500р., бонусом получаете 
+				span#prepayment-bonus 500р. 
+				br
+				| На счет зачисляется 
+				span#prepayment-credited 1 000р.
+			+b('','https://shop.mastervision.su/?r=ordering/cart/as1&id=4452&clean=true&lg=ru','Оплатить 500р.','_blank','prepayment-link')
+		.timer
+			h4.timer-title Скидка уменьшится через:
+			.clock
