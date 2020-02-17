@@ -1,3 +1,5 @@
+<?php require_once('vars.php');?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -32,7 +34,7 @@
     <section id="main">
       <div class="container">
         <header><a href="https://mastervision.su" target="_blank"><img class="header-logo" src="img/logo.png" alt="Логотип"/></a>
-          <div class="contacts"><a class="contact contact-tel" href="callto:8-929-568-87-50" target="_blank">8-929-568-87-50</a><a class="contact contact-tel" href="callto:8-499-346-79-46" target="_blank">8-499-346-79-46</a><a class="contact contact-skype" href="https://join.skype.com/invite/gkwrZmJPOtuf" target="_blank">support-mastervision</a><a class="contact contact-email" href="mailto:info@mastervision.su" target="_blank">info@mastervision.su</a></div>
+          <div class="contacts"><a class="contact contact-tel" href="callto:8-499-346-79-46" target="_blank">8-499-346-79-46</a><a class="contact contact-skype" href="https://join.skype.com/invite/gkwrZmJPOtuf" target="_blank">support-mastervision</a><a class="contact contact-email" href="mailto:info@mastervision.su" target="_blank">info@mastervision.su</a></div>
         </header>
         <div class="main-container">
           <p class="pre">записи мастер-класса - внизу страницы</p>
@@ -152,9 +154,15 @@
                   </ul>
                 </div>
                 <div class="packet-footer">
-                  <p class="cost cost-full">Стоимость:<span>9 900р.</span></p>
-                  <p class="cost cost-sale">Скидка:<span id="sale-1">1 000р.</span></p>
-                  <p class="cost cost-today">Стоимость сегодня:<span id="today-1"> 8 900р.</span></p><a class="button" href="#!" target="_blank" id="#link-1">Выбрать</a>
+                 <?php if($now < $dates[1]){;?>
+                  <p class="cost cost-full">Стоимость:<span><?=$full1;?></span></p>
+                  <p class="cost cost-sale">Скидка:<span id="sale-1"><?=$sale1;?></span></p>
+                  <p class="cost cost-today">Стоимость сегодня:<span id="today-1"><?=$today1;?></span></p>
+                  <a class="button" href="<?=$link1;?>" target="_blank" id="link-1">Выбрать</a>
+                  <?php } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken"><?=$full1;?></span></p>
+                  <a class="button" href="<?=$link1;?>" target="_blank">Выбрать</a>
+                  <?php } ;?>
                 </div>
               </div>
             </div>
@@ -172,22 +180,30 @@
                   </ul>
                 </div>
                 <div class="packet-footer">
-                  <p class="cost cost-full">Стоимость:<span>19 900р.</span></p>
-                  <p class="cost cost-sale">Скидка:<span id="sale-2">2 000р.</span></p>
-                  <p class="cost cost-today">Стоимость сегодня:<span id="today-2"> 17 900р.</span></p><a class="button" href="#!" target="_blank" id="#link-2">Выбрать</a>
+                 <?php if($now < $dates[1]){;?>
+                  <p class="cost cost-full">Стоимость:<span><?=$full2;?></span></p>
+                  <p class="cost cost-sale">Скидка:<span id="sale-2"><?=$sale2;?></span></p>
+                  <p class="cost cost-today">Стоимость сегодня:<span id="today-2"><?=$today2;?></span></p>
+                  <a class="button" href="<?=$link2;?>" target="_blank" id="link-2">Выбрать</a>
+                  <?php } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken"><?=$full2;?></span></p>
+                  <a class="button" href="<?=$link2;?>" target="_blank">Выбрать</a>
+                  <?php } ;?>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <?php if($now<$dates[1]){;?>
         <div class="prepayment">
           <h4 class="prepayment-title">Акция!!!</h4>
-          <p class="prepayment-text">Платите 500р., бонусом получаете <span id="prepayment-bonus">500р. </span><br/>На счет зачисляется <span id="prepayment-credited">1 000р.</span></p><a class="button" href="https://shop.mastervision.su/?r=ordering/cart/as1&amp;id=4452&amp;clean=true&amp;lg=ru" target="_blank" id="prepayment-link">Оплатить 500р.</a>
+          <p class="prepayment-text">Платите 500р., бонусом получаете <span id="prepayment-bonus">500р. </span><br/>На счет зачисляется <span id="prepayment-credited">1 000р.</span></p><a class="button" href="https://shop.mastervision.su/?r=ordering/cart/as1&id=4509&clean=true&lg=ru" target="_blank" id="prepayment-link">Оплатить 500р.</a>
         </div>
         <div class="timer">
           <h4 class="timer-title">Скидка уменьшится через:</h4>
           <div class="clock"></div>
         </div>
+        <?php } ;?>
       </div>
     </section>
     <section id="for">
@@ -261,28 +277,31 @@
     </section>
     <section id="records">
       <div class="container">
+       <?php if($now < $dates[2]) {;?>
         <h3 class="general-title">Записи мастер-класса</h3>
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <h4 class="record-title">Запись занятия от 20.02.20</h4>
             <div class="video-wrapper video-wrapper-rec">
-              <iframe src="https://player.vimeo.com/video/" allowFullScreen="allowFullScreen" mozallowfullscreen="mozallowfullscreen" webkitAllowFullScreen="webkitAllowFullScreen"></iframe>
+              <iframe src="https://player.vimeo.com/video/<?=$videos[0];?>" allowFullScreen="allowFullScreen" mozallowfullscreen="mozallowfullscreen" webkitAllowFullScreen="webkitAllowFullScreen"></iframe>
             </div>
-            <p class="record-text">Занятие состоится 20.02.20, в 19:00</p>
-            <p class="record-text">Запись занятия появится здесь 21.02.20, после 13:00</p>
+            <p class="record-text <?=$hides[0];?>">Занятие состоится 20.02.20, в 19:00</p>
+            <p class="record-text <?=$hides[0];?>">Запись занятия появится здесь 21.02.20, после 13:00</p>
           </div>
           <div class="col-md-6 col-sm-6">
             <h4 class="record-title record-title-2">Запись занятия от 21.02.20</h4>
             <div class="video-wrapper video-wrapper-rec">
-              <iframe src="https://player.vimeo.com/video/" allowFullScreen="allowFullScreen" mozallowfullscreen="mozallowfullscreen" webkitAllowFullScreen="webkitAllowFullScreen"></iframe>
+              <iframe src="https://player.vimeo.com/video/<?=$videos[1];?>" allowFullScreen="allowFullScreen" mozallowfullscreen="mozallowfullscreen" webkitAllowFullScreen="webkitAllowFullScreen"></iframe>
             </div>
-            <p class="record-text">Занятие состоится 21.02.20, в 19:00</p>
-            <p class="record-text">Запись занятия появится здесь 22.01.20, после 13:00</p>
+            <p class="record-text <?=$hides[1];?>">Занятие состоится 21.02.20, в 19:00</p>
+            <p class="record-text <?=$hides[1];?>">Запись занятия появится здесь 22.01.20, после 13:00</p>
           </div>
         </div>
         <p class="records-text">Записи занятий будет в открытом доступе до 25.02.20</p>
-        <h3 class="general-title hide">Записей мастер-класса нет в свободном доступе</h3>
-        <p class="records-text text-sale hide">Но Вы можете купить запись интенсива за 350р. и радоваться жизни вместе с теми, кто её уже смотрел</p><a class="button button-records-sale hide" href="#!" target="_blank">Купить записи</a>
+        <?php } else { ;?>
+        <h3 class="general-title">Записей мастер-класса нет в свободном доступе</h3>
+        <p class="records-text text-sale">Но Вы можете купить запись интенсива за 390р. и радоваться жизни вместе с теми, кто её уже смотрел</p><a class="button button-records-sale" href="https://shop.mastervision.su/?r=ordering/cart/as1&id=4510&clean=true&lg=ru" target="_blank">Купить записи</a>
+        <?php } ; ?>
       </div>
     </section>
     <footer>
